@@ -1,4 +1,4 @@
-First, realize that the plantillas.xml contains example projects. Those examples are there for you the user.
+First, realize that the plantillas.xml contains example projects. Those examples are there for you, the user.
 
 
 Now, once you have exported your map you will need to add some data to the plantillas.xml
