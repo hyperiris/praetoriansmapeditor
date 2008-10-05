@@ -1,0 +1,387 @@
+#include "GUIFontManager.h"
+#include "GUIComboBox.h"
+#include "GUIPanel.h"
+
+GUIComboBox::GUIComboBox(const char *cbs) : GUIRectangle(cbs)
+
+{
+  setScrollingColor(0.2f, 0.75f, 0.35f, 1.0f);
+  setFontScales(1.0f, 1.0f);
+  setPosition(0.5, 0.5);
+  
+  currentSelection = new GUILabel(NULL, "itemCBS_0");
+  dropMenuButton   = new GUIButton("cbddb");
+  upperPanel       = new GUIPanel("cbup");
+  lowerPanel       = new GUIPanel("cblp");
+  
+  upperPanel->setLayout(XAXIS_LAYOUT);
+  
+  upperPanel->setVisibleBounds(true);
+  upperPanel->enableBGColor(true);
+  upperPanel->setInterval(6, 3);
+  upperPanel->addWidget(currentSelection);
+  upperPanel->addWidget(dropMenuButton);
+  
+  lowerPanel->setLayout(YAXIS_LAYOUT);
+  lowerPanel->setInterval(6, 2);
+  lowerPanel->setVisible(false);
+  lowerPanel->enableBGColor(true);
+  lowerPanel->setVisibleBounds(true);
+  lowerPanel->setAnchorPoint(CORNERLU);
+  lowerPanel->setClipSize(0);
+  
+  displayScrollingRectangle =      true;
+  selectionIndex            =        -1;
+  widgetType                = COMBO_BOX;
+  fontIndex                 =         0;
+  lockItems                 =     false;
+  deployed                  =     false;
+}
+
+GUIComboBox::~GUIComboBox()
+{
+  deleteObject(currentSelection);
+  deleteObject(dropMenuButton);
+  deleteObject(upperPanel);
+  deleteObject(lowerPanel);
+}
+
+GUIEventListener  *GUIComboBox::getEventsListener()
+{
+  return this;
+}
+
+void  GUIComboBox::setFontScales(const Tuple2f &scales)
+{
+  setFontScales(scales.x, scales.y);
+}
+
+void  GUIComboBox::setFontScales(float wScale, float hScale)
+{
+  fontScales.x = clamp(hScale, 0.01f, 20.0f);
+  fontScales.y = clamp(wScale, 0.01f, 20.0f);
+}
+
+const Tuple2f  &GUIComboBox::getFontScales()
+{
+  return fontScales;
+}
+
+bool GUIComboBox::loadXMLSettings(XMLElement *element)
+{
+  if (!element || element->getName() != "ComboBox")
+    return Logger::writeErrorLog("Need a ComboBox node in the xml file");
+    
+  XMLElement *child                = NULL,
+                                     *gChild               = NULL;
+  Tuple3f     bordersColor         = upperPanel->getBordersColor();
+  Tuple4f     bgColor              = upperPanel->getBGColor();
+  float       lowerPanelColorScale = 1.0f;
+  
+  if (child = element->getChildByName("Button"))
+  {
+    dropMenuButton->loadXMLClippedRectangleInfo(child);
+    dropMenuButton->loadXMLSettings(child);
+    dropMenuButton->setCallbackString("cbddb");
+    dropMenuButton->setLabelString("");
+    dropMenuButton->setActive(true);
+    dropMenuButton->setVisible(true);
+  }
+  
+  if (child = element->getChildByName("lowerPanelColorScale"))
+    lowerPanelColorScale = child->getValuef();
+    
+  if (child = element->getChildByName("displayScrollingRectangle"))
+    displayScrollingRectangle = (child->getValue() == "true");
+    
+  if (child = element->getChildByName("hScale"))
+    fontScales.y = child->getValuef();
+    
+  if (child = element->getChildByName("wScale"))
+    fontScales.x = child->getValuef();
+    
+  if (child = element->getChildByName("clipSize"))
+    upperPanel->setClipSize(child->getValuei());
+    
+  if (child = element->getChildByName("BordersColor"))
+    XMLElement::loadRX_GY_BZf(*child, bordersColor);
+    
+  if (child = element->getChildByName("ScrollingColor"))
+    XMLElement::loadRX_GY_BZ_AWf(*child, scrollingColor);
+    
+  if (child = element->getChildByName("BGColor"))
+    XMLElement::loadRX_GY_BZ_AWf(*child, bgColor);
+    
+  for (size_t i = 0; i < element->getChildrenCount(); i++)
+  {
+    if (!(child = element->getChild(i)))
+      continue;
+      
+    const String &childName = child->getName();
+    
+    if (childName == "Item")
+      if (gChild    = child->getChildByName("string"))
+        addItem(gChild->getValue());
+        
+    if (childName == "fontIndex")
+      fontIndex =  clamp(child->getValuei(), 0, 50);
+  }
+  
+  upperPanel->setBordersColor(bordersColor);
+  lowerPanel->setBordersColor(bordersColor);
+  
+  upperPanel->setBGColor(bgColor);
+  lowerPanel->setBGColor(bgColor.x*lowerPanelColorScale,
+                         bgColor.y*lowerPanelColorScale,
+                         bgColor.z*lowerPanelColorScale,
+                         bgColor.w);
+                         
+  setScrollingColor(scrollingColor);
+  setFontScales(fontScales);
+  GUIRectangle::loadXMLSettings(element);
+  return (items.size() != 0);
+}
+
+void GUIComboBox::checkMouseEvents(MouseEvent &evt, int extraInfo, bool rBits)
+{
+  upperPanel->checkMouseEvents(evt, extraInfo, rBits);
+  scrollingRectangle.x = 1;
+  
+  if (lowerPanel->isVisible())
+    lowerPanel->checkMouseEvents(evt, extraInfo, rBits);
+    
+  if (!currentSelection->isFocused() && !dropMenuButton->isFocused())
+    deployed = false;
+    
+  if (deployed)
+  {
+    lowerPanel->setVisible(true);
+    evt.consume();
+  }
+  else
+    lowerPanel->setVisible(false);
+}
+
+void GUIComboBox::actionPerformed(GUIEvent &evt)
+{
+  GUIEventListener *eventsListener  = parent->getEventsListener();
+  const String     &cbs             = evt.getCallbackString();
+  GUIRectangle     *sourceRectangle = evt.getEventSource();
+  int               widgetType      = sourceRectangle->getWidgetType();
+  
+  if (currentSelection->isClicked() || dropMenuButton->isClicked())
+    deployed = !deployed;
+    
+  if (widgetType == LABEL && (sourceRectangle->getParent() == lowerPanel))
+  {
+    GUILabel *newSelection = (GUILabel*)sourceRectangle;
+    if (newSelection->isMouseOver())
+      scrollingRectangle = newSelection->getWindowBounds();
+      
+    if (newSelection->isClicked() &&
+        strcmp(newSelection->getLabelString(), currentSelection->getLabelString()))
+    {
+      currentSelection->setLabelString(newSelection->getLabelString());
+      selectionIndex = getItemIndex(newSelection->getLabelString());
+      update         = true;
+      if (eventsListener)
+        eventsListener->actionPerformed(GUIEvent(this));
+    }
+  }
+}
+
+void GUIComboBox::setSelectedItem(size_t index)
+{
+  if (const char* item = getItem(index))
+  {
+    currentSelection->setLabelString(item);
+    selectionIndex = index;
+  }
+}
+
+void GUIComboBox::render(float clockTick)
+{
+  if (!parent || !visible)
+    return;
+    
+  computeWindowBounds();
+  upperPanel->render(clockTick);
+  
+  if (lowerPanel->isVisible())
+  {
+    lowerPanel->renderClippedBounds();
+    lowerPanel->enableBGColor(false);
+    lowerPanel->setVisibleBounds(false);
+    
+    if (scrollingRectangle.x >= lowerPanel->getWindowBounds().x && displayScrollingRectangle)
+    {
+    
+      glEnable(GL_BLEND);
+      glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+      glColor4fv(scrollingColor);
+      
+      glBegin(GL_TRIANGLE_STRIP);
+      glVertex2i(scrollingRectangle.x - 2, scrollingRectangle.y);
+      glVertex2i(scrollingRectangle.x - 2, scrollingRectangle.w);
+      glVertex2i(scrollingRectangle.z + 1, scrollingRectangle.y);
+      glVertex2i(scrollingRectangle.z + 1, scrollingRectangle.w);
+      glEnd();
+      
+      glDisable(GL_BLEND);
+    }
+    
+    lowerPanel->render(clockTick);
+    lowerPanel->enableBGColor(true);
+    lowerPanel->setVisibleBounds(true);
+  }
+}
+
+void GUIComboBox::finalizeSize()
+{
+  if (!items.size() || lockItems)
+    return;
+    
+  GUIFont *font             = GUIFontManager::getFont(fontIndex);
+  const    int    *spaces   = font ? font->getFontObject()->getCharHorizontalGlyphs() : NULL;
+  String           itemCBS  = "itemCBS_";
+  float            maxWidth = 0,
+                              height   = 0;
+  int              cbsIndex = 1;
+  if (spaces)
+  {
+    float  width    = 0;
+    int    length   = 0;
+    
+    height   =  float(font->getFontObject()->getHeight());
+    
+    for (size_t l = 0; l < items.size(); l++)
+    {
+      length = items[l].getLength();
+      width  = 0.0f;
+      
+      for (int t = 0; t < length; t++)
+        width += spaces[items[l].getBytes()[t]];
+        
+      maxWidth = width > maxWidth ? width : maxWidth;
+    }
+  }
+  else
+    return;
+    
+  currentSelection->setLabelString(items[0]);
+  currentSelection->setDimensions(maxWidth*fontScales.x + 2.0f, height*fontScales.y);
+  currentSelection->getLabel()->setFontIndex(fontIndex);
+  currentSelection->getLabel()->setScales(fontScales);
+  dropMenuButton->setDimensions(height*fontScales.y + 4.0f, height*fontScales.y + 4.0f);
+  
+  for (size_t l = 0; l < items.size(); l++)
+  {
+    GUILabel *newLabel = new GUILabel(items[l], itemCBS + (cbsIndex++));
+    newLabel->getLabel()->setFontIndex(fontIndex);
+    newLabel->setDimensions(maxWidth*fontScales.x + 2.0f /*+ height*fontScales.y + 10.0f*/, height*fontScales.y);
+    newLabel->getLabel()->setScales(fontScales);
+    if (!lowerPanel->addWidget(newLabel))
+      deleteObject(newLabel);
+  }
+  selectionIndex =    0;
+  lockItems      = true;
+}
+
+const void GUIComboBox::computeWindowBounds()
+{
+  finalizeSize();
+  
+  if (parent && update)
+  {
+    upperPanel->setAnchorPoint(getAnchorPoint());
+    upperPanel->setPosition(getPosition());
+    upperPanel->setParent(parent);
+    upperPanel->forceUpdate(true);
+    upperPanel->computeWindowBounds();
+    upperPanel->forceUpdate(false);
+    windowBounds = upperPanel->getWindowBounds();
+    
+    lowerPanel->setPosition(0.0f, float(upperPanel->getHeight()));
+    lowerPanel->setParent(upperPanel);
+    lowerPanel->forceUpdate(true);
+    
+    //Redirect mouse events to combo box action listener
+    lowerPanel->setParent(this);
+    upperPanel->setParent(this);
+  }
+}
+
+void GUIComboBox::addItem(const String &item)
+{
+  if (lockItems || !item.getLength())
+    return;
+    
+  for (size_t t = 0; t < items.size(); t++)
+    if (items[t] == item)
+      return;
+      
+  items.push_back(item);
+}
+
+int  GUIComboBox::getItemIndex(const String &item)
+{
+  for (size_t t = 0; t < items.size(); t++)
+    if (items[t] == item)
+      return int(t);
+      
+  return -1;
+}
+
+const std::vector<String> &GUIComboBox::getItems() const
+{
+  return items;
+}
+
+const char  *GUIComboBox::getSelectedItem()  const
+{
+  return selectionIndex < 0 ? NULL : items[selectionIndex];
+}
+
+const char  *GUIComboBox::getItem(size_t index) const
+{
+  return index >= items.size() ? NULL :  items[index];
+}
+
+void    GUIComboBox::setScrollingColor(float r, float g, float b, float a)
+{
+  scrollingColor.set(clamp(r, 0.0f, 255.0f),
+                     clamp(g, 0.0f, 255.0f),
+                     clamp(b, 0.0f, 255.0f),
+                     clamp(a, 0.0f, 255.0f));
+                     
+  scrollingColor.x /= (scrollingColor.x > 1.0) ? 255.0f : 1.0f;
+  scrollingColor.y /= (scrollingColor.y > 1.0) ? 255.0f : 1.0f;
+  scrollingColor.z /= (scrollingColor.z > 1.0) ? 255.0f : 1.0f;
+  scrollingColor.w /= (scrollingColor.w > 1.0) ? 255.0f : 1.0f;
+}
+
+void    GUIComboBox::setScrollingColor(const Tuple4f &rgba)
+{
+  setScrollingColor(rgba.x, rgba.y, rgba.z, rgba.w);
+}
+
+const   Tuple4f &GUIComboBox::getScrollingColor() const
+{
+  return  scrollingColor;
+}
+
+void    GUIComboBox::enableScrollingRectangle(bool on)
+{
+  displayScrollingRectangle = on;
+}
+
+bool    GUIComboBox::scrollingRectangleEnabled()
+{
+  return displayScrollingRectangle;
+}
+
+bool GUIComboBox::isDeployed()
+{
+  if (lowerPanel) return lowerPanel->isVisible();
+  return false;
+}

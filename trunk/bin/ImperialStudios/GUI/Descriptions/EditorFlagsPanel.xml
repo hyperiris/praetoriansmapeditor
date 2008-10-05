@@ -1,0 +1,115 @@
+<Panel name           = "EditorFlagsPanel"
+       layout         = "XAXIS"
+       anchorPoint    = "CORNERLU"
+       drawBounds     = "false"
+       drawBackground = "false"
+       clipSize       = "0"
+       visible        = "true">
+  
+  <Position x = "2" y = "2" />
+  <BordersColor x = "0.3" y = "0.3" z = "0.3" />
+  <BGColor x = "20" y = "20" z = "20" w = "1" />
+  
+  <ComboBox callbackString = "BrushTypesCB" clipSize = "0">
+    <ScrollingColor x = "88" y = "76" z = "30" />
+    <BordersColor x = "102" y = "90" z = "34" />
+    <BGColor x = "20" y = "20" z = "20" w = "1" />
+    <Button name = "cbbutton0" drawBounds = "true" clipSize = "0" >
+      <BordersColor x = "88" y = "76" z = "30" />
+      <Color x = "68" y = "56" z = "10" w = "1" />
+    </Button>
+    <Item string = "Arrow" />
+    <Item string = "Paint" />
+    <Item string = "Fill" />
+    <Item string = "Marker" />
+    <Item string = "Pastel" />
+    <Item string = "Raise" />
+    <Item string = "Lower" />
+    <Item string = "Erase" />
+    <Item string = "Restore" />
+    <Item string = "Burn" />
+    <Item string = "Heal" />
+    <Item string = "Tile erase" />
+    <Item string = "Tile logic" />
+    <Item string = "Tile flag" />
+    <Item string = "Advanced" />
+  </ComboBox>
+
+  <ComboBox callbackString = "TileOrientationCB" clipSize = "0">
+    <ScrollingColor x = "88" y = "76" z = "30" />
+    <BordersColor x = "102" y = "90" z = "34" />
+    <BGColor x = "20" y = "20" z = "20" w = "1" />
+    <Button name = "cbbutton1" drawBounds = "true" clipSize = "0" >
+      <BordersColor x = "88" y = "76" z = "30" />
+      <Color x = "68" y = "56" z = "10" w = "1" />
+    </Button>
+    <Item string = "Rotate 90"  />
+    <Item string = "Rotate 180" />
+    <Item string = "Rotate 270" />
+  </ComboBox>
+  
+  <ComboBox callbackString = "TileMirrorCB" clipSize = "0">
+    <ScrollingColor x = "88" y = "76" z = "30" />
+    <BordersColor x = "102" y = "90" z = "34" />
+    <BGColor x = "20" y = "20" z = "20" w = "1" />
+    <Button name = "cbbutton2" drawBounds = "true" clipSize = "0" >
+      <BordersColor x = "88" y = "76" z = "30" />
+      <Color x = "68" y = "56" z = "10" w = "1" />
+    </Button>
+    <Item string = "Mirror X" />
+    <Item string = "Mirror Y" />
+  </ComboBox>
+  
+  <ComboBox callbackString = "TileLogicCB" clipSize = "0">
+    <ScrollingColor x = "88" y = "76" z = "30" />
+    <BordersColor x = "102" y = "90" z = "34" />
+    <BGColor x = "20" y = "20" z = "20" w = "1" />
+    <Button name = "cbbutton3" drawBounds = "true" clipSize = "0" >
+      <BordersColor x = "88" y = "76" z = "30" />
+      <Color x = "68" y = "56" z = "10" w = "1" />
+    </Button>
+    <Item string = "None" />
+    <Item string = "Flat" />
+    <Item string = "Tilt_1" />
+    <Item string = "Tilt_2" />
+    <Item string = "Tilt_3" />
+    <Item string = "Structure" />
+    <Item string = "Bridge" />
+    <Item string = "Modified" />
+    <Item string = "Door" />
+    <Item string = "Wall open" />
+    <Item string = "Wall blocked" />
+    <Item string = "Wall ground" />
+    <Item string = "Fortress" />
+    <Item string = "Flat structure" />
+    <Item string = "Buildable" />
+    <Item string = "Blocked build" />
+    <Item string = "No Siege" />
+    <Item string = "Block war machines" />
+    <Item string = "Not passable" />
+    <Item string = "Scenery end" />
+  </ComboBox>
+  
+  <ComboBox callbackString = "TileTypesCB" clipSize = "0">
+    <ScrollingColor x = "88" y = "76" z = "30" />
+    <BordersColor x = "102" y = "90" z = "34" />
+    <BGColor x = "20" y = "20" z = "20" w = "1" />
+    <Button name = "cbbutton4" drawBounds = "true" clipSize = "0" >
+      <BordersColor x = "88" y = "76" z = "30" />
+      <Color x = "68" y = "56" z = "10" w = "1" />
+    </Button>
+    <Item string = "Unused" />
+    <Item string = "Normal" />
+    <Item string = "Sand" />
+    <Item string = "Deep water" />
+    <Item string = "Shore" />
+    <Item string = "Grassfield" />
+    <Item string = "Light trees" />
+    <Item string = "Forest" />
+    <Item string = "Wall" />
+    <Item string = "Blocked" />
+    <Item string = "Snow" />
+    <Item string = "Scenery end" />
+  </ComboBox>
+  
+</Panel>

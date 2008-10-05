@@ -1,0 +1,21 @@
+<Panel name = "ModelPropsPanel" clipSize = "0" layout = "YAXIS" drawBounds = "true" drawBackground = "true" visible = "false"> 
+  
+  <BGColor x = "50" y = "50" z = "50" w = "135" />
+  <BordersColor x = "216" y = "169" z =  "0" />
+  
+  <Interval y = "2" />
+  
+  <Label name = "Title">    
+    <Text string = "Model properties">
+      <Color r = "255" g = "180" b = "40" />
+    </Text>
+  </Label>
+  
+  <Separator ratio = "1.0" />
+  
+  <Label name = "ModelNameLabel"><Text string = "Name: " /></Label>
+  <Label name = "ModelTriLabel"><Text string = "Triangles: 0" /></Label>
+  <Label name = "ModelWidthLabel"><Text string = "Width: " /></Label>
+  <Label name = "ModelHeightLabel"><Text string = "Height: " /></Label>
+  
+</Panel>

@@ -1,0 +1,48 @@
+<Stage> 
+  
+  <Export path = "C:\\Program Files\\Eidos Interactive\\Pyro Studios\\Praetorians\\DATA\\" />
+  
+  <MenuMusic path = "To Victory.mp3" />
+  
+  <MediaSource>
+    <MediaFolder path = "ImperialStudios/GUI/" />
+    <MediaFolder path = "ImperialStudios/GUI/Descriptions/" />
+    <MediaFolder path = "ImperialStudios/Textures/" />
+    <MediaFolder path = "ImperialStudios/Textures/Cursors/" />
+    <MediaFolder path = "ImperialStudios/Definitions/" />
+    <MediaFolder path = "ImperialStudios/Sounds/" />
+    
+    <MediaFolder path = "ImperialStudios/Export/" />
+    <MediaFolder path = "ImperialStudios/Export/Misiones/" />
+    <MediaFolder path = "ImperialStudios/Export/Mapas/" />
+    <MediaFolder path = "ImperialStudios/Export/Mapas/Descripcion/" />
+    <MediaFolder path = "ImperialStudios/Export/Mapas/Texturas/" />
+  </MediaSource>
+  
+  <Benchmark  duration    = "10" 
+              enabled     = "false" 
+              logFilePath = "Profile.txt" />
+
+  <Window title = "Praetorians Map Editor">
+
+    <DisplayMode  colorDepth  =    "32"
+                  colorBits   =    "24"
+                  fullscreen  =  "true"
+                  centered    =  "true"
+                  width       =  "1024"
+                  height      =   "768"
+                  x           =     "0"
+                  y           =     "0" />
+    
+    <GLCaps       accumulation =     "0"
+                  doubleBuffer =  "true"
+                  samples      =     "0"
+                  stencil      =     "0" 
+                  vsync        = "false"
+                  alpha        =     "0"
+                  depth        =    "24"
+                  color        =    "32" />
+
+  </Window> 
+  
+</Stage>

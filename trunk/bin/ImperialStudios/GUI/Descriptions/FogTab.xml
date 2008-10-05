@@ -1,0 +1,61 @@
+<Panel name = "Fog"
+       layout = "CEN_YAXIS"
+       drawBounds = "false"
+       drawBackground = "false"
+       clipSize = "0">
+  
+  <CheckBox callbackString = "DensityCheckbox">
+    <Color x = "1"  y = "1" z = "1" />
+    <Text string = "Enable" />
+  </CheckBox>
+  
+  <Slider callbackString = "FogDensitySlider" discWidth = "16" discHeight = "25" progress = "0.00">
+    <Text string = "Density: f = 1/10^((0.00 * 0.1 * z)^2)" />
+    <Dimensions x = "175" />
+  </Slider>
+  
+  <Panel name = "FogColorSliders" layout = "XAXIS">
+    
+    <Slider callbackString = "FogRedSlider" orientation = "VERTICAL" discWidth = "16" discHeight = "25" progress = "0.00">
+      <Text string = "Red: 0.00"/>
+    </Slider>
+    
+    <Slider callbackString = "FogGreenSlider" orientation = "VERTICAL" discWidth = "16" discHeight = "25" progress = "0.00">
+      <Text string = "Green: 0.00"/>
+    </Slider>
+    
+    <Slider callbackString = "FogBlueSlider" orientation = "VERTICAL" discWidth = "16" discHeight = "25" progress = "0.00">
+      <Text string = "Blue: 0.00"/>
+    </Slider>
+    
+    <Button callbackString = "FogColorPreview" bounce = "false" clipSize = "0" minAlpha = "1" drawBounds = "true">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <Color r = "0" g = "0" b = "0" a = "1" />
+      <Dimensions x = "50" y = "50" />
+    </Button>
+    
+    <Panel name = "FGCPPanel" layout = "YAXIS">
+      
+      <Label name = "FGRLabel">
+        <Text string = "R: 0.00">
+          <Color r = "255" g = "0" b = "0" />
+        </Text>
+      </Label>
+      
+      <Label name = "FGGLabel">
+        <Text string = "G: 0.00">
+          <Color r = "0" g = "255" b = "0" />
+        </Text>
+      </Label>
+      
+      <Label name = "FGBLabel">
+        <Text string = "B: 0.00">
+          <Color r = "0" g = "0" b = "255" />
+        </Text>
+      </Label>
+      
+    </Panel>
+    
+  </Panel>
+  
+</Panel>

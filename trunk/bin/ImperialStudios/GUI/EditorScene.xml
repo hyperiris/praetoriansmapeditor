@@ -1,0 +1,116 @@
+<EditorScene>
+  
+  <Controller>
+    
+    <Command  type   = "change"
+              source = "Back"
+              target = "MainMenuScene"/>
+		
+    <Command  type   = "switch"
+              source = "StructureTexture"
+              target = "StructureLabScene"/>
+    
+    <Command  type   = "switch"
+              source = "NatureTexture"
+              target = "NatureLabScene"/>
+    
+    <Command  type   = "switch"
+              source = "CharacterTexture"
+              target = "CharacterLabScene"/>
+    
+    <Command  type   = "switch"
+              source = "CritterTexture"
+              target = "CritterLabScene"/>
+    
+    <Command  type   = "switch"
+              source = "VillageTexture"
+              target = "VillageLabScene"/>
+    
+    <Command  type   = "swap"
+              source = "Options"
+              target = "OptionsScene"/>
+    
+    <Command  type   = "switch"
+              source = "AdvancedBrushBTN"
+              target = "BrushLabScene"/>
+    
+  </Controller>
+
+  <Panel visible = "false" name = "Main Menu">
+    
+    <Font path = "ArialSmall.tga" />
+    <Texture description = "GUIElements.xml" />
+    
+    <Panel description = "MemoryStatsPanel.xml" />
+    <Panel description = "EditorToolbar.xml" />
+    <Panel description = "EditorFlagsPanel.xml" />
+    <Panel description = "EditorConfigPanel.xml" />
+    <Panel description = "TilesetPanel.xml" />
+    <Panel description = "FPSPanel.xml" />
+    <Panel description = "PopupMessagePanel.xml" />
+    
+    <Panel name = "LaboratoryPanel" layout = "XAXIS" anchorPoint = "CORNERLD" drawBounds = "false" drawBackground = "false" clipSize = "0" visible = "true"> 
+      
+      <Position x = "2" y = "-2" />
+      <BGColor x = "0" y = "0"  z = "0" w = "1" />
+      <BordersColor x = "0.3" y = "0.3" z = "0.3" />
+      
+      <Button callbackString = "TileTexture" minAlpha = "1" drawBackground = "true" drawBounds = "true" clipSize = "0">
+				<TextureRectangle z = "64" w = "64" x = "120" y = "123" />
+        <Texture type = "TEXTURE_2D" path = "GUITiles.png"/>
+        <BordersColor x = "58" y = "46" z = "0" />
+        <Color x = "1" y = "1" z = "1" />
+				<Dimensions x = "64" y = "64" />
+			</Button>
+      
+			<Button callbackString = "StructureTexture" minAlpha = "1" drawBackground = "true" drawBounds = "true" clipSize = "0">
+				<TextureRectangle z = "0" w = "64" x = "55" y = "123" />
+        <Texture type = "TEXTURE_2D" path = "GUITiles.png"/>
+        <BordersColor x = "58" y = "46" z = "0" />
+        <Color x = "1" y = "1" z = "1" />
+				<Dimensions x = "64" y = "64" />
+			</Button>
+      
+      <Button callbackString = "NatureTexture" minAlpha = "1" drawBackground = "true" drawBounds = "true" clipSize = "0">
+        <TextureRectangle z = "127" w = "0" x = "185" y = "60" />
+        <Texture type = "TEXTURE_2D" path = "GUITiles.png"/>
+				<BordersColor x = "58" y = "46" z = "0" />
+        <Color x = "1" y = "1" z = "1" />
+				<Dimensions x = "64" y = "64" />
+			</Button>
+      
+      <Button callbackString = "CharacterTexture" minAlpha = "1" drawBackground = "true" drawBounds = "true" clipSize = "0">
+        <TextureRectangle z = "190" w = "0" x = "247" y = "60" />
+        <Texture type = "TEXTURE_2D" path = "GUITiles.png"/>
+				<BordersColor x = "58" y = "46" z = "0" />
+        <Color x = "1" y = "1" z = "1" />
+				<Dimensions x = "64" y = "64" />
+			</Button>
+      
+      <Button callbackString = "CritterTexture" minAlpha = "1" drawBackground = "true" drawBounds = "true" clipSize = "0">
+        <TextureRectangle z = "0" w = "0" x = "57" y = "61" />
+        <Texture type = "TEXTURE_2D" path = "GUITiles.png"/>
+				<BordersColor x = "58" y = "46" z = "0" />
+        <Color x = "1" y = "1" z = "1" />
+				<Dimensions x = "64" y = "64" />
+			</Button>
+      
+      <Button callbackString = "VillageTexture" minAlpha = "1" drawBackground = "true" drawBounds = "true" clipSize = "0">
+        <TextureRectangle z = "64" w = "0" x = "121" y = "60" />
+        <Texture type = "TEXTURE_2D" path = "GUITiles.png"/>
+				<BordersColor x = "58" y = "46" z = "0" />
+        <Color x = "1" y = "1" z = "1" />
+				<Dimensions x = "64" y = "64" />
+			</Button>
+      
+    </Panel>
+    
+    <TexCoordsDesc xStart = "201" yStart = "2"   xEnd = "217" yEnd = "27"  type = "SLIDER"/>
+    <TexCoordsDesc xStart = "1"   yStart = "136" xEnd = "21"  yEnd = "155" type = "CHECK_BOX"/>
+    <TexCoordsDesc xStart = "25"  yStart = "132" xEnd = "49"  yEnd = "155" type = "CHECK_BOX_MARK"/>
+    <TexCoordsDesc xStart = "8"   yStart = "7" xEnd = "61"  yEnd = "59" type = "RADIO_BUTTON"/>
+    <TexCoordsDesc xStart =  "72" yStart = "11" xEnd = "117" yEnd = "56" type = "CHECK_RB_MARK"/>
+    
+  </Panel>
+  
+</EditorScene>

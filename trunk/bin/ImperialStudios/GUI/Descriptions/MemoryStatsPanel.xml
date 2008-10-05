@@ -1,0 +1,50 @@
+<Panel 	name           	= "MemoryStatsPanel"
+        layout         	= "YAXIS"
+        drawBounds     	= "true"
+        drawBackground 	= "true"
+        clipSize				= "0"
+        visible         = "false">
+  
+  <BordersColor x = "102" y = "90" z = "34" />
+  <BGColor x = "0" y = "0" z = "0" w = "0.5"/>
+  <Interval x="2" y="2" />
+  
+  <Panel name="MemStatsWindowPanel" layout = "YAXIS" clipSize = "0" drawBounds = "true" drawBackground = "false">
+    <Interval x="0" y="0" />
+    <BordersColor x = "58" y = "46" z = "0" />
+    <MaterialSurface callbackString = "MemStatsWindow" drawBounds = "false" visible = "true" clipSize = "0">
+      <Dimensions x = "256" y = "64"/>
+      <Appearance colorEnabled = "true">
+        <Color x = "1" y = "1" z = "1" w = "0.4"/>
+        <BlendAttributes source = "SRC_ALPHA" destination = "ONE_MINUS_SRC_ALPHA" />
+      </Appearance>
+    </MaterialSurface>
+  </Panel>
+  
+  <Panel name = "MemStatsTextPanel" layout = "YAXIS" drawBounds = "false" drawBackground = "false">
+    
+    <Interval x="5" y="0" />
+    
+    <Label name = "TotalMem">
+      <Text string = "PF size: 0%" />
+    </Label>
+    
+    <Label name = "PeakMem">
+      <Text string = "Peak size: 0%" />
+    </Label>
+    
+    <Label name = "TerrainUsedMem">
+      <Text string = "Used size (T): 0%" />
+    </Label>
+    
+    <Label name = "GeometryUsedMem">
+      <Text string = "Used size (G): 0%" />
+    </Label>
+    
+    <Label name = "FilebufferUsedMem">
+      <Text string = "Used size (F): 0%" />
+    </Label>
+    
+  </Panel>
+
+</Panel>

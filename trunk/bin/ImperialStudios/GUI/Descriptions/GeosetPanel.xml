@@ -1,0 +1,152 @@
+<Panel name = "GeosetPanel" layout = "CEN_YAXIS" drawBounds = "false" drawBackground = "true" anchorPoint = "CORNERLU" clipSize = "0" visible = "true">
+  
+  <BGColor x = "0" y =  "0" z = "0" w = "1" />
+  <BordersColor x = "216" y = "169" z = "0" />
+  <Position x = "10" y = "10"/>
+  <Interval x = "0" y = "0" />
+  
+  <Label name = "SetCounter"><Text string = "Models 0/0" /></Label>
+  
+  <Panel name = "Row0" anchorPoint = "CORNERLU" layout = "XAXIS" clipSize = "0">
+    
+    <Interval x = "4" y = "2" />
+    
+    <Button callbackString = "GSBTN_0" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+    <Button callbackString = "GSBTN_1" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+  </Panel>
+  
+  <Panel name = "Row1" anchorPoint = "CORNERLU" layout = "XAXIS" clipSize = "0">
+    
+    <Interval x = "4" y = "2" />
+    
+    <Button callbackString = "GSBTN_2" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+    <Button callbackString = "GSBTN_3" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+  </Panel>
+  
+  <Panel name = "Row2" anchorPoint = "CORNERLU" layout = "XAXIS" clipSize = "0">
+    
+    <Interval x = "4" y = "2" />
+    
+    <Button callbackString = "GSBTN_4" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+    <Button callbackString = "GSBTN_5" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+  </Panel>
+  
+  <Panel name = "Row3" anchorPoint = "CORNERLU" layout = "XAXIS" clipSize = "0">
+    
+    <Interval x = "4" y = "2" />
+    
+    <Button callbackString = "GSBTN_6" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+    <Button callbackString = "GSBTN_7" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+  </Panel>
+  
+  <Panel name = "Row4" anchorPoint = "CORNERLU" layout = "XAXIS" clipSize = "0">
+    
+    <Interval x = "4" y = "2" />
+    
+    <Button callbackString = "GSBTN_8" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+    <Button callbackString = "GSBTN_9" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+  </Panel>
+  
+  <Panel name = "Row5" anchorPoint = "CORNERLU" layout = "XAXIS" clipSize = "0">
+    
+    <Interval x = "4" y = "2" />
+    
+    <Button callbackString = "GSBTN_10" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+    <Button callbackString = "GSBTN_11" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+  </Panel>
+  
+  <Panel name = "Row6" anchorPoint = "CORNERLU" layout = "XAXIS" clipSize = "0">
+    
+    <Interval x = "4" y = "2" />
+    
+    <Button callbackString = "GSBTN_12" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+    <Button callbackString = "GSBTN_13" drawBounds = "true" clipSize = "0" minAlpha = "0.22">
+      <BordersColor x = "58" y = "46" z = "0" />
+      <BGColor x = "1" y =  "1" z = "1" />
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "64" y = "64" />
+    </Button>
+    
+  </Panel>
+  
+  <Panel description = "CounterButtons.xml" />
+  
+</Panel>

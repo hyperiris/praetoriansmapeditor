@@ -1,0 +1,39 @@
+<Critters>
+	
+  <Objeto name = "golondrina" />
+  <Objeto name = "gorrion" />
+  <Objeto name = "ke_ardilla" />
+  <Objeto name = "cuervo" />
+  <Objeto name = "mirlo" />
+  <Objeto name = "ke_ciervo_base" />
+  <Objeto name = "ke_aldeano_base" />
+  <Objeto name = "ke_aldeano_tipo2_base" />
+  <Objeto name = "ke_aldeana_base" />
+  <Objeto name = "ke_herrero_base" />
+  <Objeto name = "ke_aldeana_tipo2_base" />
+  <Objeto name = "kn_aldeana_base" />
+  <Objeto name = "kn_aldeana_tipo2_base" />
+  <Objeto name = "kn_aldeano_base" />
+  <Objeto name = "kn_aldeano_tipo2_base" />
+  <Objeto name = "kn_lenador_base" />
+  <Objeto name = "kd_aldeana_base" />
+  <Objeto name = "kd_aldeana_tipo2_base" />
+  <Objeto name = "kd_aldeano_base" />
+  <Objeto name = "kd_aldeano_tipo2_base" />
+  <Objeto name = "kd_cubos_base" />
+  <Objeto name = "ke_mabras_banco" />
+  <Objeto name = "ke_sardinas_banco" />
+  <Objeto name = "ke_serranillos_banco" />
+  <Objeto name = "ke_alce" />
+  <Objeto name = "ke_alce_2_base" />
+  <Objeto name = "ke_jabali_base" />
+  <Objeto name = "ke_oveja_1_base" />
+  <Objeto name = "ke_oveja_2_base" />
+  <Objeto name = "ke_oveja_3_base" />
+  <Objeto name = "ke_vaca_1_base" />
+  <Objeto name = "ke_vaca_2_base" />
+  <Objeto name = "ke_vaca_3_base" />
+  <Objeto name = "ke_conejo_base" />
+  <Objeto name = "ke_rata_base" />
+
+</Critters>

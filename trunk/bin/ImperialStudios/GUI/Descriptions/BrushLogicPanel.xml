@@ -1,0 +1,55 @@
+<Panel 	name 						= "BrushLogicPanel"
+        layout         	= "XAXIS"
+        anchorPoint    	= "CORNERLU"
+        drawBounds     	= "false"
+        drawBackground 	= "false"
+        clipSize 				= "0">
+  
+  <Position x = "104" y = "10" />
+  <Interval y = "0" />
+  
+  <ComboBox callbackString = "TileFlags">
+    <ScrollingColor x = "0" y = "0.4" z = "0" />
+    <BGColor x = "0.2"  y = "0.2"  z = "0.2" w = "1" />
+    <BordersColor x = "0.3" y = "0.3" z = "0.3" />
+    <Item string = "NONE" />
+    <Item string = "NOPASSABLE" />
+    <Item string = "FLAT" />
+    <Item string = "TILT1" />
+    <Item string = "TILT2" />
+    <Item string = "TILT3" />
+    <Item string = "STRUCTURE" />
+    <Item string = "BRIDGE" />
+    <Item string = "MODIFIED" />
+    <Item string = "DOOR" />
+    <Item string = "NO_SIEGE" />
+    <Item string = "BUILDABLE" />
+    <Item string = "WALL_OPEN" />
+    <Item string = "WALL_BLOCKED" />
+    <Item string = "FORTRESS" />
+    <Item string = "BLOCKED_BUILD" />
+    <Item string = "FLAT_STRUCTURE" />
+    <Item string = "SCENERY_END" />
+    <Item string = "WALL_GROUND" />
+    <Item string = "BLOCK_WAR_MACHINES" />
+  </ComboBox>
+  
+  <ComboBox callbackString = "TileLogic">
+    <ScrollingColor x = "0" y = "0.4" z = "0" />
+    <BGColor x = "0.2"  y = "0.2"  z = "0.2" w = "1" />
+    <BordersColor x = "0.3" y = "0.3" z = "0.3" />
+    <Item string = "UNUSED" />
+    <Item string = "NORMAL" />
+    <Item string = "SAND" />
+    <Item string = "DEEP_WATER" />
+    <Item string = "SHORE" />
+    <Item string = "GRASSFIELD" />
+    <Item string = "LIGHT_TREES" />
+    <Item string = "FOREST" />
+    <Item string = "WALL" />
+    <Item string = "BLOCKED" />
+    <Item string = "SNOW" />
+    <Item string = "SCENERY_END" />
+  </ComboBox>
+  
+</Panel>

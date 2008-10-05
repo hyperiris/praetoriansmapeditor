@@ -1,0 +1,130 @@
+<Panel name           = "BrushPanel"
+       layout         = "YAXIS"
+       anchorPoint    = "CORNERLU"
+       drawBounds     = "true"
+       drawBackground = "true"
+       clipSize       = "0"
+       visible				= "true">
+  
+  <Position x = "10" y = "10" />
+  <Interval x = "0" y = "0" />
+  <BGColor x = "20"  y = "20"  z = "20" w = "1" />
+  <BordersColor x = "0.3" y = "0.3" z = "0.3" />
+  
+  <Panel name = "BrushTypePanel" layout = "YAXIS" clipSize = "0">
+    
+    <RadioButton callbackString = "Pointer" checked = "true" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Arrow" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Paint" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Paint" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Fill" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Fill" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Marker" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Marker" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Pastel" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Pastel" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Raise" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Raise" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Lower" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Lower" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Erase" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Erase" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Restore" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Restore" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Burn" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Burn" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Heal" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Heal" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "TileErase" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Erase tile" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Logic" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Tile logic" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Flag" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Tile flag" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Advanced" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Advanced" />
+    </RadioButton>
+    
+  </Panel>
+  
+  <Separator ratio = "1.0" />
+  
+  <Panel name = "TileOrientationPanel" layout = "YAXIS" clipSize = "0">
+    
+    <RadioButton callbackString = "Rotate90" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Rotate 90" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Rotate180" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Rotate 180" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "Rotate270" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Rotate 270" />
+    </RadioButton>
+  
+  </Panel>
+  
+  <Separator ratio = "1.0" />
+  
+  <Panel name = "TileMirrorPanel" layout = "YAXIS" clipSize = "0">
+    
+    <RadioButton callbackString = "MirrorX" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Mirror X" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "MirrorY" minAlpha = "0.35">
+      <Color x = "1"  y = "1"   z = "1" />
+      <Text string  = "Mirror Y" />
+    </RadioButton>
+  
+  </Panel>
+  
+</Panel>

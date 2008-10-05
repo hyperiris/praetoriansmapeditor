@@ -1,0 +1,22 @@
+<Panel 	name           	= "Minimap"
+        layout         	= "YAXIS"
+        drawBounds     	= "false"
+        drawBackground 	= "false"
+        clipSize				= "0">
+  
+  <Interval x = "0" y = "0" />
+  
+  <Panel name = "MinimapPanel" layout = "CEN_YAXIS" drawBounds = "false" drawBackground = "false" clipSize = "0">
+  
+    <MaterialSurface callbackString = "AutoMap" visible = "true" clipSize = "0">
+      <Dimensions x = "180" y = "180"/>
+      <EdgeOffsets x = "0" y = "0"/>
+      <Appearance colorEnabled = "true">
+        <Color x = "1" y = "1" z = "1" w = "0.7"/>
+        <BlendAttributes source = "SRC_ALPHA" destination = "ONE_MINUS_SRC_ALPHA" />
+      </Appearance>
+    </MaterialSurface>
+    
+  </Panel>
+
+</Panel>

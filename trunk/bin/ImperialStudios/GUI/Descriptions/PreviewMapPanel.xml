@@ -1,0 +1,24 @@
+<Panel name = "PreviewMapPanel" layout = "XAXIS" drawBackground  = "false">
+  
+  <Interval x = "10" />
+  
+  <Button callbackString = "PreviewMapLeft" minAlpha = "1" clipSize = "0" drawBounds = "false">
+    <TextureRectangle x = "33" y = "131" z = "65" w = "99" />
+    <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+    <Dimensions   x = "32" y = "32" />
+    <Color x = "1" y = "1" z = "1" />
+  </Button>
+  
+  <Button drawBounds = "false" callbackString = "PreviewSurface" active = "false" clipSize = "0" minAlpha = "1">
+    <Color x = "1" y = "1" z = "1" />
+    <Dimensions x = "180" y = "112" />
+  </Button>
+  
+  <Button callbackString = "PreviewMapRight" minAlpha = "1" clipSize = "0" drawBounds = "false">
+    <TextureRectangle x = "65" y = "131" z = "97" w = "99" />
+    <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+    <Dimensions   x = "32" y = "32" />
+    <Color x = "1" y = "1" z = "1" />
+  </Button>
+  
+</Panel>

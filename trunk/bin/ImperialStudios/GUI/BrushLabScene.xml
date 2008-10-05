@@ -1,0 +1,119 @@
+<BrushLabScene>
+	
+  <Controller>
+    
+    <Command type = "change" source = "CancelButton" target = "EditorScene"/>
+    <Command type = "change" source = "AcceptButton" target = "EditorScene"/>
+    
+  </Controller>
+  
+  <Panel visible = "false" name = "Brush Lab">
+    
+    <Font path = "ArialSmall.tga" />
+    <Texture description = "GUIElements.xml" />
+    
+    <Panel description = "OKCancelPanel.xml" />
+    <Panel description = "TilesetPanel.xml" />
+    
+    <Panel name           = "BrushMatrixFlagsPanel"
+             layout         = "XAXIS"
+             anchorPoint    = "CORNERLU"
+             drawBounds     = "false"
+             drawBackground = "false"
+             clipSize       = "0"
+             visible        = "true">
+  
+      <Position x = "2" y = "2" />
+      <BordersColor x = "0.3" y = "0.3" z = "0.3" />
+      <BGColor x = "20" y = "20" z = "20" w = "1" />
+      
+      <ComboBox callbackString = "TileMatrixOrientationCB" clipSize = "0">
+        <ScrollingColor x = "88" y = "76" z = "30" />
+        <BordersColor x = "102" y = "90" z = "34" />
+        <BGColor x = "20" y = "20" z = "20" w = "1" />
+        <Button name = "cbbutton1" drawBounds = "true" clipSize = "0" >
+          <BordersColor x = "88" y = "76" z = "30" />
+          <Color x = "68" y = "56" z = "10" w = "1" />
+        </Button>
+        <Item string = "Rotate 0"  />
+        <Item string = "Rotate 90"  />
+        <Item string = "Rotate 180" />
+        <Item string = "Rotate 270" />
+      </ComboBox>
+      
+      <ComboBox callbackString = "TileMatrixMirrorCB" clipSize = "0">
+        <ScrollingColor x = "88" y = "76" z = "30" />
+        <BordersColor x = "102" y = "90" z = "34" />
+        <BGColor x = "20" y = "20" z = "20" w = "1" />
+        <Button name = "cbbutton2" drawBounds = "true" clipSize = "0" >
+          <BordersColor x = "88" y = "76" z = "30" />
+          <Color x = "68" y = "56" z = "10" w = "1" />
+        </Button>
+        <Item string = "Mirror none" />
+        <Item string = "Mirror X" />
+        <Item string = "Mirror Y" />
+      </ComboBox>
+    
+    </Panel>
+    
+    <Panel  name    = "TileMatrixParentPanel"
+            layout  = "YAXIS">
+            
+      <Interval x = "0" y = "0" />
+      
+      <Panel  name            = "TileMatrixPanel"
+              layout          = "CEN_YAXIS"
+              clipSize        = "0"
+              drawBounds      = "false"
+              drawBackground  = "false">
+        
+        <BGColor x = "20"  y = "20"  z = "20" w = "1" />
+        <BordersColor x = "102" y = "90" z = "34" />
+        <Interval x = "0" y = "0" />
+        
+      </Panel>
+      
+    </Panel>
+    
+    <Panel  name            = "BrushMatrixConfigPanel"
+            layout          = "XAXIS"
+            drawBackground  = "true"
+            drawBounds      = "false"
+            clipSize        = "0"
+            anchorPoint     = "CORNERRU">
+      
+      <BGColor x = "0" y = "0" z = "0" w = "1" />
+      <Position x = "-2" y = "2" />
+      
+      <ComboBox callbackString = "BrushMatrixSizeCB" clipSize = "0">
+        <ScrollingColor x = "88" y = "76" z = "30" />
+        <BordersColor x = "102" y = "90" z = "34" />
+        <BGColor x = "20" y = "20" z = "20" w = "0.6" />
+        <Button name = "cbbutton" drawBounds = "true" clipSize = "0" >
+          <BordersColor x = "88" y = "76" z = "30" />
+          <Color x = "68" y = "56" z = "10" w = "1" />
+        </Button>
+        <Item string = "2x2" />
+        <Item string = "3x3" />
+        <Item string = "4x4" />
+      </ComboBox>
+      
+      <Button callbackString = "BrushMatrixCreateBTN" clipSize = "0" minAlpha = "1">
+        <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+        <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+        <Color x = "1" y = "1" z = "1" />
+        <Dimensions x = "60" y = "25" />
+        <Text string = "New" />
+      </Button>
+      
+    </Panel>
+    
+    <TexCoordsDesc xStart = "201" yStart = "2"   xEnd = "217" yEnd = "27"  type = "SLIDER"/>
+    <TexCoordsDesc xStart = "1"   yStart = "136" xEnd = "21"  yEnd = "155" type = "CHECK_BOX"/>
+    <TexCoordsDesc xStart = "25"  yStart = "132" xEnd = "49"  yEnd = "155" type = "CHECK_BOX_MARK"/>
+    <TexCoordsDesc xStart = "8"   yStart = "7" xEnd = "61"  yEnd = "59" type = "RADIO_BUTTON"/>
+    <TexCoordsDesc xStart =  "72" yStart = "11" xEnd = "117" yEnd = "56" type = "CHECK_RB_MARK"/>
+    
+  </Panel>
+  
+</BrushLabScene>

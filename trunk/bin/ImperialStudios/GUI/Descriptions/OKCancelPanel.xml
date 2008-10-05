@@ -1,0 +1,23 @@
+<Panel name = "OKCanelPanel" layout = "XAXIS" anchorPoint = "CORNERRD" drawBackground = "false" clipSize = "0" visible = "true">
+  
+  <Position x = "-4" y = "-4"/>
+  <BGColor x = "0" y = "0" z = "0" w = "1" />
+  <Interval x = "2" y = "2" />
+  
+  <Button callbackString = "CancelButton" minAlpha = "1" drawBounds = "false" clipSize = "0">
+    <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+    <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+    <Color x = "1" y = "1" z = "1" />
+    <Dimensions x = "122" y = "30" />
+    <Text string = "Cancel" />
+  </Button>
+  
+  <Button callbackString = "AcceptButton" minAlpha = "1" drawBounds = "false" clipSize = "0">
+    <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+    <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+    <Color x = "1" y = "1" z = "1" />
+    <Dimensions x = "122" y = "30" />
+    <Text string = "Accept" />
+  </Button>
+  
+</Panel>
