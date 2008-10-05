@@ -8,7 +8,7 @@ file. The new files will exist in the "Export" folder. We must tell the map edit
   * Visual name = "kwantum.PVE"
   * Praderas name = "kwantum.PRA"
   * Logica name = "kwantum.MLG"
-  * Aqua name = "kwantum.H2O"
+  * Agua name = "kwantum.H2O"
  
 
 You will also get two BMP files so that you can edit them in Photoshop, or some other image editing software. If you want to use the BMP files, then do something like this example:
@@ -19,7 +19,7 @@ You will also get two BMP files so that you can edit them in Photoshop, or some 
   * Colores name = "kwantum_color.bmp"
   * Praderas name = "kwantum.PRA"
   * Logica name = "kwantum.MLG"
-  * Aqua name = "kwantum.H2O"
+  * Agua name = "kwantum.H2O"
  
 Now restart the map editor and load your project.
 
