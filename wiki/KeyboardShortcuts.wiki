@@ -1,0 +1,16 @@
+*General*
+||C||preview 3D model before placing it on the map||
+||H||hide graphical user interface||
+||F8||capture screen-shot||
+||F1||clear terrain alpha||
+||F2||clear terrain shading||
+||space||erase tile logic flags||
+
+*Camera movements*
+||Q||down||
+||E||up||
+||W||forward||
+||S||backward||
+||A||left||
+||D||right||
+||mouse right||rotate||
