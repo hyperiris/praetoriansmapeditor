@@ -1,0 +1,27 @@
+<Panel name = "PopupMessagePanel"
+       layout = "GRID"
+       drawBounds = "false"
+       drawBackground = "true"
+       clipSize = "0"
+       visible = "false">
+
+  <BGColor x = "1" y = "1" z = "1" w = "1" />
+  <Texture type = "TEXTURE_2D" path = "FondoDialogo.png" />
+  <TextureRectangle x = "0.0" y = "0.0" z = "1.0" w = "1.0" />
+  <Dimensions x = "300" y = "150" />
+  <Interval x = "0" y = "0" />
+  
+  <Label name = "PopupMessageLabel">
+    <Text string = "" />
+  </Label>
+  
+  <Button callbackString = "PMOKButton" minAlpha = "1" drawBounds = "false" clipSize = "0">
+    <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+    <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+    <Color x = "1" y = "1" z = "1" />
+    <Dimensions x = "122" y = "30" />
+    <Text string = "OK" />
+    <Position y="-30"/>
+  </Button>
+  
+</Panel>

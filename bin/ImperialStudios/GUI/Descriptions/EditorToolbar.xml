@@ -1,0 +1,37 @@
+<Panel name           = "EditorToolbar"
+       layout         = "XAXIS"
+       anchorPoint    = "CORNERRD"
+       drawBounds     = "false"
+       drawBackground = "false"
+       clipSize       = "0"
+       visible				= "true">
+  
+  <Position x = "-4" y = "-4"/>
+  <BGColor x = "0" y = "0" z = "0" w = "1" />
+  <Interval x = "2" y = "2" />
+
+  <Button callbackString = "Export" minAlpha = "1" drawBounds = "false" clipSize = "0">
+    <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+    <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+    <Color x = "1" y = "1" z = "1"/>
+    <Dimensions   x = "122" y = "30" />
+    <Text string = "Export" />
+  </Button>
+  
+  <Button callbackString = "Options" minAlpha = "1" drawBounds = "false" clipSize = "0">
+    <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+    <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+    <Color x = "1" y = "1" z = "1" />
+    <Dimensions   x = "122" y = "30" />
+    <Text string = "Options" />
+  </Button>
+  
+  <Button callbackString = "Back" minAlpha = "1" drawBounds = "false" clipSize = "0">
+    <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+    <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+    <Color x = "1" y = "1" z = "1" />
+    <Dimensions   x = "122" y = "30" />
+    <Text string = "Back" />
+  </Button>
+  
+</Panel>

@@ -1,0 +1,129 @@
+<Panel 	name           	= "Water"
+        layout         	= "YAXIS"
+        drawBounds     	= "false"
+        drawBackground 	= "false"
+        clipSize				= "0">
+  
+  <Interval x = "0" y = "0" />
+  
+  <Panel  name        = "WaterTabButtons"
+          layout      = "XAXIS"
+          drawBounds  = "false">
+          
+    <Button callbackString = "WaterCreateButton" clipSize = "0" minAlpha = "1">
+      <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+      <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "60" y = "25" />
+      <Text string = "Create" />
+    </Button>
+		
+		<Button callbackString = "WaterCancelButton" clipSize = "0" minAlpha = "1">
+      <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+      <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "60" y = "25" />
+      <Text string = "Cancel" />
+    </Button>
+    
+    <Button callbackString = "WaterFinalizeButton" clipSize = "0" minAlpha = "1">
+      <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+      <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "60" y = "25" />
+      <Text string = "Finalize" />
+    </Button>
+    
+  </Panel>
+  
+  <RadioButton callbackString = "WaterTabAddVertRBTN" visible = "false" minAlpha = "0.35" active = "false">
+    <Color x = "1"  y = "1"   z = "1" />
+    <Text string = "Add vertex" />
+  </RadioButton>
+  
+  <RadioButton callbackString = "WaterTabRemoveTriRBTN" visible = "false" minAlpha = "0.35" active = "false">
+    <Color x = "1"  y = "1"   z = "1" />
+    <Text string = "Remove triangle" />
+  </RadioButton>
+  
+  <Panel name = "WaterTabColorPanel" layout = "CEN_YAXIS" >
+  
+    <Label name = "WaterColorLabel">
+      <Text string = "Water color">
+        <Color r = "255" g = "180" b = "40" />
+      </Text>
+    </Label>
+  
+    <Panel name = "WaterColorPreviewPanel" layout = "XAXIS" >
+  
+      <Slider callbackString  = "WaterRedSlider"
+              orientation     = "VERTICAL"
+              discWidth       = "16" 
+              discHeight      = "25"
+              progress        = "0.00">
+        <Text string = "Red: 0.00"/>
+      </Slider>
+      
+      <Slider callbackString  = "WaterGreenSlider" 
+              orientation     = "VERTICAL" 
+              discWidth       = "16"
+              discHeight      = "25"
+              progress        = "0.48">
+        <Text string = "Green: 0.48"/>
+      </Slider>
+      
+      <Slider callbackString  = "WaterBlueSlider"
+              orientation     = "VERTICAL"
+              discWidth       = "16"
+              discHeight      = "25"
+              progress        = "0.68">
+        <Text string = "Blue: 0.68"/>
+      </Slider>
+			
+			<Slider callbackString  = "WaterAlphaSlider"
+              orientation     = "VERTICAL"
+              discWidth       = "16"
+              discHeight      = "25"
+              progress        = "1.00">
+        <Text string = "Alpha: 1.00"/>
+      </Slider>
+      
+      <Button callbackString = "WaterColorPreviewWindow" bounce = "false" clipSize = "0" minAlpha = "1" drawBounds = "true">
+        <BordersColor x = "58" y = "46" z = "0" />
+        <Color x = "0" y = "0.48" z = "0.68" w = "1" />
+        <Dimensions x = "50" y = "50" />
+      </Button>
+      
+      <Panel name = "WaterColorLabelsPanel" layout = "YAXIS">
+        
+        <Label name = "WRLabel">
+          <Text string = "R: 0.00">
+            <Color r = "255" g = "0" b = "0" />
+          </Text>
+        </Label>
+        
+        <Label name = "WGLabel">
+          <Text string = "G: 0.48">
+            <Color r = "0" g = "255" b = "0" />
+          </Text>
+        </Label>
+        
+        <Label name = "WBLabel">
+          <Text string = "B: 0.68">
+            <Color r = "0" g = "0" b = "255" />
+          </Text>
+        </Label>
+				
+				<Label name = "WALabel">
+          <Text string = "A: 1.00">
+            <Color r = "255" g = "255" b = "255" />
+          </Text>
+        </Label>
+        
+      </Panel>
+    
+    </Panel>
+  
+  </Panel>
+
+</Panel>

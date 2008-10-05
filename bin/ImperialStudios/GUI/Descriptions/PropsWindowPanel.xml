@@ -1,0 +1,21 @@
+<Panel name = "PropsWindowPanel" layout = "YAXIS" drawBackground = "true" clipSize = "0">
+  
+  <BGColor x = "0" y = "0" z = "0" w = "1" />
+  <Interval x = "2" y = "2" />
+  
+  <CheckBox callbackString = "BoundsCheckbox" checked = "false">
+    <Color x = "1" y = "1" z = "1" />
+    <Text string = "Boundaries" />
+  </CheckBox>
+  
+  <CheckBox callbackString = "AxisCheckbox" checked = "false">
+    <Color x = "1" y = "1" z = "1" />
+    <Text string = "Axis" />
+  </CheckBox>
+  
+  <CheckBox callbackString = "PropsCheckbox" checked = "false">
+    <Color x = "1" y = "1" z = "1" />
+    <Text string = "Properties" />
+  </CheckBox>
+  
+</Panel>

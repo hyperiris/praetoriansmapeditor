@@ -1,0 +1,96 @@
+<NewmapScene>
+  
+  <Controller>
+    
+    <Command  type   = "change"
+              source = "CancelButton"
+              target = "MainMenuScene"/>
+    
+    <Command  type   = "change"
+              source = "AcceptButton"
+              target = "EditorScene"/>
+    
+  </Controller>
+  
+  <Panel visible = "false" name = "New Map">
+    
+    <Font path = "ArialSmall.tga" />
+    <Texture description = "GUIElements.xml" />
+    
+    <Panel name = "Copywrite" drawBackground = "false" drawBoudnds = "false">
+      <Position x = "5" y = "-5" />
+      <Label name = "CopywriteLabel" >
+        <Text string = "MOD Imperial 5.0" />
+      </Label>
+    </Panel>
+    
+    <Panel name = "NewmapPanel" layout = "XAXIS" drawBounds = "true" clipSize = "0" drawBackground = "false">
+      
+      <BordersColor x = "102" y = "90" z = "34" />
+      <Interval x = "2" y = "2" />
+      
+      <Panel name = "ProjectPanel" layout = "YAXIS" drawBounds = "true" drawBackground = "true" clipSize = "0">
+        
+        <BordersColor x = "58" y = "46" z = "0" />
+        <BGColor x = "0.1" y = "0.1" z = "0.1" w = "0.6" />
+        <Interval x = "10" y = "10"/>
+        
+        <Label name = "PreviewMapName">
+          <Text string = "" >
+          <Color r = "255" g = "180" b = "40" />
+          </Text>
+        </Label>
+        
+        <Label name = "MapMode" >
+          <Text string = "Mode: " />
+        </Label>
+        
+        <Label name = "MapSize" >
+          <Text string = "Size: " />
+        </Label>
+        
+        <ComboBox callbackString = "PastureTypeList" clipSize = "0">
+          <ScrollingColor x = "88" y = "76" z = "30" />
+          <BordersColor x = "102" y = "90" z = "34" />
+          <BGColor x = "20" y = "20" z = "20" w = "0.6" />
+          <Button name = "cbbutton" drawBounds = "true" clipSize = "0" >
+            <BordersColor x = "88" y = "76" z = "30" />
+            <Color x = "68" y = "56" z = "10" w = "1" />
+          </Button>
+          <Item string = "Default" />
+          <Item string = "Nieve" />
+          <Item string = "EuropaCentral" />
+          <Item string = "Desierto" />
+          <Item string = "Mediterraneo" />
+        </ComboBox>
+        
+        <Panel description = "PreviewMapPanel.xml" />
+        
+        <Panel name = "ProjectNamePanel" layout = "XAXIS" drawBounds = "false" drawBackground = "false" clipSize = "0">
+            
+            <Label name = "ProjectName">    
+              <Text string = "Project name" />
+            </Label>
+            
+            <TextBox callbackString = "ProjectNameEditBox" >
+              <Dimensions x = "190" />
+            </TextBox>
+          
+        </Panel>
+        
+      </Panel>
+      
+    </Panel>
+    
+    <Panel description = "OKCancelPanel.xml" />
+    <Panel description = "PopupMessagePanel.xml" />
+    
+    <TexCoordsDesc xStart = "201" yStart = "2"   xEnd = "217" yEnd = "27"  type = "SLIDER"/>
+    <TexCoordsDesc xStart = "1"   yStart = "136" xEnd = "21"  yEnd = "155" type = "CHECK_BOX"/>
+    <TexCoordsDesc xStart = "25"  yStart = "132" xEnd = "49"  yEnd = "155" type = "CHECK_BOX_MARK"/>
+    <TexCoordsDesc xStart = "8"   yStart = "7" xEnd = "61"  yEnd = "59" type = "RADIO_BUTTON"/>
+    <TexCoordsDesc xStart =  "72" yStart = "11" xEnd = "117" yEnd = "56" type = "CHECK_RB_MARK"/>
+    
+  </Panel>
+  
+</NewmapScene>

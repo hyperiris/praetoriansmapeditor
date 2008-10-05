@@ -1,0 +1,184 @@
+<Panel 	name           	= "Layers"
+        layout         	= "YAXIS"
+        drawBounds     	= "false"
+        drawBackground 	= "false"
+        clipSize				= "0">
+  
+  <Interval x = "0" y = "0" />
+  
+  <Panel name = "LayerProperties" layout = "YAXIS">
+    
+    <CheckBox callbackString = "LayerBlendCheckbox" checked = "true">
+      <Color x = "1" y = "1" z = "1" />
+      <Text string = "Blend" />
+    </CheckBox>
+  
+  </Panel>
+  
+  <Panel name = "TileLayerList" layout = "XAXIS" drawBounds = "false" drawBackground = "false" clipSize = "0">
+    
+    <Panel name = "TileLayerErase" layout = "YAXIS">
+      
+      <Interval x = "0" y = "0"/>
+      
+      <Button callbackString  = "ClearTileLayer1" drawBounds = "false">
+        <TextureRectangle x = "126" y = "98" z = "158" w = "72" />
+        <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+        <Color x = "1" y = "1" z = "1" />
+        <Dimensions x = "32" y = "27" />
+      </Button>
+      
+      <Button callbackString = "ClearTileLayer0" drawBounds = "false">
+        <TextureRectangle x = "126" y = "98" z = "158" w = "72" />
+        <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+        <Color x = "1" y = "1" z = "1" />
+        <Dimensions x = "32" y = "27" />
+      </Button>
+      
+      <Button callbackString  = "ClearNatureLayer" drawBounds = "false">
+        <TextureRectangle x = "126" y = "98" z = "158" w = "72" />
+        <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+        <Color x = "1" y = "1" z = "1" />
+        <Dimensions x = "32" y = "27" />
+      </Button>
+      
+      <Button callbackString  = "ClearStructureLayer" drawBounds = "false">
+        <TextureRectangle x = "126" y = "98" z = "158" w = "72" />
+        <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+        <Color x = "1" y = "1" z = "1" />
+        <Dimensions x = "32" y = "27" />
+      </Button>
+      
+      <Button callbackString  = "ClearVillageLayer" drawBounds = "false">
+        <TextureRectangle x = "126" y = "98" z = "158" w = "72" />
+        <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+        <Color x = "1" y = "1" z = "1" />
+        <Dimensions x = "32" y = "27" />
+      </Button>
+      
+      <Button callbackString  = "ClearCharacterLayer" drawBounds = "false">
+        <TextureRectangle x = "126" y = "98" z = "158" w = "72" />
+        <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+        <Color x = "1" y = "1" z = "1" />
+        <Dimensions x = "32" y = "27" />
+      </Button>
+      
+      <Button callbackString  = "ClearCritterLayer" drawBounds = "false">
+        <TextureRectangle x = "126" y = "98" z = "158" w = "72" />
+        <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+        <Color x = "1" y = "1" z = "1" />
+        <Dimensions x = "32" y = "27" />
+      </Button>
+      
+      <Button callbackString  = "ClearGrassLayer" drawBounds = "false">
+        <TextureRectangle x = "126" y = "98" z = "158" w = "72" />
+        <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+        <Color x = "1" y = "1" z = "1" />
+        <Dimensions x = "32" y = "27" />
+      </Button>
+			
+			<Button callbackString  = "ClearWaterLayer" drawBounds = "false">
+        <TextureRectangle x = "126" y = "98" z = "158" w = "72" />
+        <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+        <Color x = "1" y = "1" z = "1" />
+        <Dimensions x = "32" y = "27" />
+      </Button>
+      
+    </Panel>
+      
+    <Panel name = "TileLayerVisibility" layout = "YAXIS">
+      
+      <Interval x = "0" y = "7"/>
+      
+      <CheckBox callbackString = "TileLayer1Visibility" checked = "true">
+        <Color x = "1" y = "1" z = "1" />
+      </CheckBox>
+      
+      <CheckBox callbackString = "TileLayer0Visibility" checked = "true">
+        <Color x = "1" y = "1" z = "1" />
+      </CheckBox>
+      
+      <CheckBox callbackString = "NatureLayerVisibility" checked = "true">
+        <Color x = "1" y = "1" z = "1" />
+      </CheckBox>
+      
+      <CheckBox callbackString = "StructureLayerVisibility" checked = "true">
+        <Color x = "1" y = "1" z = "1" />
+      </CheckBox>
+      
+      <CheckBox callbackString = "VillageLayerVisibility" checked = "true">
+        <Color x = "1" y = "1" z = "1" />
+      </CheckBox>
+      
+      <CheckBox callbackString = "CharacterLayerVisibility" checked = "true">
+        <Color x = "1" y = "1" z = "1" />
+      </CheckBox>
+      
+      <CheckBox callbackString = "CritterLayerVisibility" checked = "true">
+        <Color x = "1" y = "1" z = "1" />
+      </CheckBox>
+      
+      <CheckBox callbackString = "GrassLayerVisibility" checked = "true">
+        <Color x = "1" y = "1" z = "1" />
+      </CheckBox>
+			
+			<CheckBox callbackString = "WaterLayerVisibility" checked = "true">
+        <Color x = "1" y = "1" z = "1" />
+      </CheckBox>
+      
+    </Panel>
+    
+    <Panel name = "TileLayerSelection" layout = "YAXIS">
+      
+      <Interval x = "3" y = "7"/>
+      
+      <RadioButton callbackString = "SecondaryLayer" minAlpha = "0.35">
+        <Color x = "1"  y = "1"   z = "1" />
+        <Text string = "Top tiles" />
+      </RadioButton>
+      
+      <RadioButton callbackString = "PrimaryLayer" minAlpha = "0.35">
+        <Color x = "1"  y = "1"   z = "1" />
+        <Text string = "Bottom tiles" />
+      </RadioButton>
+      
+      <RadioButton callbackString = "NatureLayerSelection" minAlpha = "0.35">
+        <Color x = "1"  y = "1"   z = "1" />
+        <Text string = "Nature" />
+      </RadioButton>
+      
+      <RadioButton callbackString = "StructureLayerSelection" minAlpha = "0.35">
+        <Color x = "1"  y = "1"   z = "1" />
+        <Text string = "Structures" />
+      </RadioButton>
+      
+      <RadioButton callbackString = "VillageLayerSelection" minAlpha = "0.35">
+        <Color x = "1"  y = "1"   z = "1" />
+        <Text string = "Villages" />
+      </RadioButton>
+      
+      <RadioButton callbackString = "CharacterLayerSelection" minAlpha = "0.35">
+        <Color x = "1"  y = "1"   z = "1" />
+        <Text string = "Characters" />
+      </RadioButton>
+      
+      <RadioButton callbackString = "CritterLayerSelection" minAlpha = "0.35">
+        <Color x = "1"  y = "1"   z = "1" />
+        <Text string = "Critters" />
+      </RadioButton>
+      
+      <RadioButton callbackString = "GrassLayerSelection" minAlpha = "0.35">
+        <Color x = "1"  y = "1"   z = "1" />
+        <Text string = "Grass" />
+      </RadioButton>
+			
+			<RadioButton callbackString = "WaterLayerSelection" minAlpha = "0.35">
+        <Color x = "1"  y = "1"   z = "1" />
+        <Text string = "Water" />
+      </RadioButton>
+      
+    </Panel>
+    
+  </Panel>
+  
+</Panel>

@@ -1,0 +1,62 @@
+<Panel 	name           	= "Brush"
+        layout         	= "CEN_YAXIS"
+        drawBounds     	= "false"
+        drawBackground 	= "false"
+        clipSize				= "0">
+  
+  <Interval x="0" y="5" />
+  
+  <CheckBox callbackString = "PickingCheckbox">
+    <Color x = "1"  y = "1" z = "1" />
+    <Text string = "Enable" />
+  </CheckBox>
+  
+  <Panel name = "BrushTip" layout = "YAXIS">
+    
+    <Slider callbackString = "BrushRadius" discWidth = "16" discHeight = "25" progress = "0.20">
+      <Text string = "Radius: 2.00" />
+    </Slider>
+    
+    <Slider callbackString = "BrushStrength" discWidth = "16" discHeight = "25" progress = "0.00">
+      <Text string = "Strength: 0.00" />
+    </Slider>
+    
+    <Slider callbackString = "BrushOpacity" discWidth = "16" discHeight = "25" progress = "0.00">
+      <Text string = "Opacity: 0.00" />
+    </Slider>
+    
+  </Panel>
+  
+  <Panel name = "BrushModes" layout = "XAXIS">
+    
+    <RadioButton callbackString = "TileMode" minAlpha = "0.35">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "T" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "GrassMode" minAlpha = "0.35">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "G" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "WaterMode" minAlpha = "0.35">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "W" />
+    </RadioButton>
+    
+    <RadioButton callbackString = "ModelMode" minAlpha = "0.35">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "M" />
+    </RadioButton>
+    
+  </Panel>
+  
+  <Button callbackString = "AdvancedBrushBTN" clipSize = "0" minAlpha = "1">
+    <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+    <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+    <Color x = "1" y = "1" z = "1" />
+    <Dimensions x = "70" y = "25" />
+    <Text string = "Advanced" />
+  </Button>
+
+</Panel>

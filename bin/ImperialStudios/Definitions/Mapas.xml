@@ -1,0 +1,392 @@
+<Mapas>
+	
+	<Mapa name = "Snowy Pass">
+    <Texturas name = "MP_2_1.PTE" />
+    <Visual   name = "MP_2_1.PVE" />
+    <Logica   name = "MP_2_1.MLG" />
+    <Objetos  name = "MP_2_1.MOB" />
+		<Minimap 	name = "MP_2_1.TGA" />
+		<Mode     name = "1 v 1"      />
+    <Size     x = "140" y = "120" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>
+	</Mapa>
+  
+  <Mapa name = "Fields of War">
+    <Texturas name = "MP_2_2.PTE" />
+    <Visual   name = "MP_2_2.PVE" />
+    <Logica   name = "MP_2_2.MLG" />
+    <Objetos  name = "MP_2_2.MOB" />
+    <Praderas name = "MP_2_2.PRA" />
+		<Minimap 	name = "MP_2_2.TGA" />
+  	<Mode     name = "1 v 1"      />		<Size     x = "140" y = "120" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+  
+  <Mapa name = "Dire Straits">
+    <Texturas name = "MP_2_3.PTE" />
+    <Visual   name = "MP_2_3.PVE" />
+    <Logica   name = "MP_2_3.MLG" />
+    <Objetos  name = "MP_2_3.MOB" />
+    <Praderas name = "MP_2_3.PRA" />
+		<Minimap 	name = "MP_2_3.TGA" />
+  	<Mode     name = "1 v 1"      />		<Size     x = "100" y = "50" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Face Off">
+    <Texturas name = "MP_2_4.PTE" />
+    <Visual   name = "MP_2_4.PVE" />
+    <Logica   name = "MP_2_4.MLG" />
+    <Objetos  name = "MP_2_4.MOB" />
+		<Minimap 	name = "MP_2_4.TGA" />
+  	<Mode     name = "1 v 1"      />		<Size     x = "150" y = "100" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+  
+  <Mapa name = "Flower of Conflict">
+    <Texturas name = "MP_4_1.PTE" />
+    <Visual   name = "MP_4_1.PVE" />
+    <Logica   name = "MP_4_1.MLG" />
+    <Objetos  name = "MP_4_1.MOB" />
+    <Praderas name = "MP_4_1.PRA" />
+		<Minimap 	name = "MP_4_1.TGA" />
+  	<Mode     name = "2 v 2"      />		<Size     x = "140" y = "140" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+  
+	<Mapa name = "A Quiet Lake">
+    <Texturas name = "MP_4_2.PTE" />
+    <Visual   name = "MP_4_2.PVE" />
+    <Logica   name = "MP_4_2.MLG" />
+    <Objetos  name = "MP_4_2.MOB" />
+		<Minimap 	name = "MP_4_2.TGA" />
+  	<Mode     name = "2 v 2"      />		<Size     x = "150" y = "150" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Cross Roads">
+    <Texturas name = "MP_4_3.PTE" />
+    <Visual   name = "MP_4_3.PVE" />
+    <Logica   name = "MP_4_3.MLG" />
+    <Objetos  name = "MP_4_3.MOB" />
+    <Praderas name = "MP_4_3.PRA" />
+		<Minimap 	name = "MP_4_3.TGA" />
+  	<Mode     name = "2 v 2"      />		<Size     x = "130" y = "130" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "A Handful of Cities">
+    <Texturas name = "MP_4_4.PTE" />
+    <Visual   name = "MP_4_4.PVE" />
+    <Logica   name = "MP_4_4.MLG" />
+    <Objetos  name = "MP_4_4.MOB" />
+    <Praderas name = "MP_4_4.PRA" />
+		<Minimap 	name = "MP_4_4.TGA" />
+  	<Mode     name = "2 v 2"      />		<Size     x = "154" y = "154" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Hill Country">
+    <Texturas name = "MP_6_1.PTE" />
+    <Visual   name = "MP_6_1.PVE" />
+    <Logica   name = "MP_6_1.MLG" />
+    <Objetos  name = "MP_6_1.MOB" />
+		<Minimap 	name = "MP_6_1.TGA" />
+  	<Mode     name = "3 v 3"      />		<Size     x = "225" y = "204" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "The Plain">
+    <Texturas name = "MP_6_2.PTE" />
+    <Visual   name = "MP_6_2.PVE" />
+    <Logica   name = "MP_6_2.MLG" />
+    <Objetos  name = "MP_6_2.MOB" />
+    <Praderas name = "MP_6_2.PRA" />
+		<Minimap 	name = "MP_6_2.TGA" />
+  	<Mode     name = "3 v 3"      />		<Size     x = "180" y = "150" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "King of the Mountain">
+    <Texturas name = "MP_6_3.PTE" />
+    <Visual   name = "MP_6_3.PVE" />
+    <Logica   name = "MP_6_3.MLG" />
+    <Objetos  name = "MP_6_3.MOB" />
+    <Praderas name = "MP_6_3.PRA" />
+		<Minimap 	name = "MP_6_3.TGA" />
+  	<Mode     name = "3 v 3"      />		<Size     x = "185" y = "185" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Desert Oasis">
+    <Texturas name = "MP_6_4.PTE" />
+    <Visual   name = "MP_6_4.PVE" />
+    <Logica   name = "MP_6_4.MLG" />
+    <Objetos  name = "MP_6_4.MOB" />
+    <Praderas name = "MP_6_4.PRA" />
+		<Minimap 	name = "MP_6_4.TGA" />
+  	<Mode     name = "3 v 3"      />		<Size     x = "200" y = "200" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Hurricane">
+    <Texturas name = "MP_6_5.PTE" />
+    <Visual   name = "MP_6_5.PVE" />
+    <Logica   name = "MP_6_5.MLG" />
+    <Objetos  name = "MP_6_5.MOB" />
+    <Praderas name = "MP_6_5.PRA" />
+		<Minimap 	name = "MP_6_5.TGA" />
+  	<Mode     name = "3 v 3"      />		<Size     x = "180" y = "180" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Sacred Land">
+    <Texturas name = "MP_8_1.PTE" />
+    <Visual   name = "MP_8_1.PVE" />
+    <Logica   name = "MP_8_1.MLG" />
+    <Objetos  name = "MP_8_1.MOB" />
+		<Minimap 	name = "MP_8_1.TGA" />
+  	<Mode     name = "4 v 4"      />		<Size     x = "180" y = "180" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+  
+  <Mapa name = "Chaos Island">
+    <Texturas name = "MP_8_3.PTE" />
+    <Visual   name = "MP_8_3.PVE" />
+    <Logica   name = "MP_8_3.MLG" />
+    <Objetos  name = "MP_8_3.MOB" />
+		<Praderas name = "MP_8_3.PRA" />
+		<Minimap 	name = "MP_8_3.TGA" />
+  	<Mode     name = "4 v 4"      />		<Size     x = "225" y = "225" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Where Two Rivers Cross">
+    <Texturas name = "MP_8_4.PTE" />
+    <Visual   name = "MP_8_4.PVE" />
+    <Logica   name = "MP_8_4.MLG" />
+    <Objetos  name = "MP_8_4.MOB" />
+		<Minimap 	name = "MP_8_4.TGA" />
+  	<Mode     name = "4 v 4"      />		<Size     x = "225" y = "225" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+  
+	<Mapa name = "Escort to Bibracate">
+    <Texturas name = "SP_BIBRACTE.PTE" />
+    <Visual   name = "SP_BIBRACTE.PVE" />
+    <Logica   name = "SP_BIBRACTE.MLG" />
+    <Objetos  name = "SP_BIBRACTE.MOB" />
+		<Minimap 	name = "SP_BIBRACTE.TGA" />
+		<Size     x = "92" y = "50" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Of all the Gallic Tribes">
+    <Texturas name = "SP_PRIMERA_DEFENSA.PTE" />
+    <Visual   name = "SP_PRIMERA_DEFENSA.PVE" />
+    <Logica   name = "SP_PRIMERA_DEFENSA.MLG" />
+    <Objetos  name = "SP_PRIMERA_DEFENSA.MOB" />
+    <Praderas name = "SP_PRIMERA_DEFENSA.PRA" />
+		<Minimap 	name = "SP_PRIMERA_DEFENSA.TGA" />
+		<Size     x = "180" y = "90" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Divide and Conquer">
+    <Texturas name = "SP_JEFES_GALOS.PTE" />
+    <Visual   name = "SP_JEFES_GALOS.PVE" />
+    <Logica   name = "SP_JEFES_GALOS.MLG" />
+    <Objetos  name = "SP_JEFES_GALOS.MOB" />
+    <Praderas name = "SP_JEFES_GALOS.PRA" />
+		<Minimap 	name = "SP_JEFES_GALOS.TGA" />
+		<Size     x = "200" y = "200" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "The Everlasting Frontier">
+    <Texturas name = "SP_RHIN.PTE" />
+    <Visual   name = "SP_RHIN.PVE" />
+    <Logica   name = "SP_RHIN.MLG" />
+    <Objetos  name = "SP_RHIN.MOB" />
+		<Minimap 	name = "SP_RHIN.TGA" />
+		<Size     x = "150" y = "100" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "A Land Lost in the Mist">
+    <Texturas name = "SP_RESCATE_COMIO.PTE" />
+    <Visual   name = "SP_RESCATE_COMIO.PVE" />
+    <Logica   name = "SP_RESCATE_COMIO.MLG" />
+    <Objetos  name = "SP_RESCATE_COMIO.MOB" />
+    <Praderas name = "SP_RESCATE_COMIO.PRA" />
+		<Minimap 	name = "SP_RESCATE_COMIO.TGA" />
+		<Size     x = "195" y = "205" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Greed">
+    <Texturas name = "SP_TEMPLOS.PTE" />
+    <Visual   name = "SP_TEMPLOS.PVE" />
+    <Logica   name = "SP_TEMPLOS.MLG" />
+    <Objetos  name = "SP_TEMPLOS.MOB" />
+		<Minimap 	name = "SP_TEMPLOS.TGA" />
+    <Praderas name = "SP_TEMPLOS.PRA" />
+		<Size     x = "225" y = "150" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Fear the Eagles">
+    <Texturas name = "SP_BRITANNIA.PTE" />
+    <Visual   name = "SP_BRITANNIA.PVE" />
+    <Logica   name = "SP_BRITANNIA.MLG" />
+    <Objetos  name = "SP_BRITANNIA.MOB" />
+		<Minimap 	name = "SP_BRITANNIA.TGA" />
+		<Size     x = "200" y = "150" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Cold Treason">
+    <Texturas name = "SP_Ciceron.PTE" />
+    <Visual   name = "SP_Ciceron.PVE" />
+    <Logica   name = "SP_Ciceron.MLG" />
+    <Objetos  name = "SP_Ciceron.MOB" />
+		<Minimap 	name = "SP_Ciceron.TGA" />
+		<Size     x = "275" y = "225" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "When All Hell Breaks Loose">
+    <Texturas name = "SP_huida_mesopotamia.PTE" />
+    <Visual   name = "SP_huida_mesopotamia.PVE" />
+    <Logica   name = "SP_Huida_Mesopotamia.MLG" />
+    <Objetos  name = "SP_huida_mesopotamia.MOB" />
+    <Praderas name = "SP_huida_mesopotamia.PRA" />
+		<Minimap 	name = "SP_Huida_Mesopotamia.TGA" />
+		<Size     x = "300" y = "250" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "He Who Dares...">
+    <Texturas name = "SP_CEVENNES.PTE" />
+    <Visual   name = "SP_CEVENNES.PVE" />
+    <Logica   name = "SP_Cevennes.MLG" />
+    <Objetos  name = "SP_CEVENNES.MOB" />
+		<Minimap 	name = "SP_CEVENNES.TGA" />
+		<Size     x = "325" y = "200" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "War of Attrition">
+    <Texturas name = "SP_Carros.PTE" />
+    <Visual   name = "SP_Carros.PVE" />
+    <Logica   name = "SP_Carros.MLG" />
+    <Objetos  name = "SP_Carros.MOB" />
+		<Minimap 	name = "SP_Carros.TGA" />
+		<Size     x = "150" y = "150" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+	
+	<Mapa name = "Tutorial I">
+    <Texturas name = "SP_TUTORIAL_1.PTE" />
+    <Visual   name = "SP_TUTORIAL_1.PVE" />
+    <Logica   name = "SP_TUTORIAL_1.MLG" />
+    <Objetos  name = "SP_TUTORIAL_1.MOB" />
+		<Minimap 	name = "SP_TUTORIAL_1.TGA" />
+		<Size     x = "135" y = "75" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+  
+  <Mapa name = "Tutorial II">
+    <Texturas name = "SP_TUTORIAL_2.PTE" />
+    <Visual   name = "SP_TUTORIAL_2.PVE" />
+    <Logica   name = "SP_TUTORIAL_2.MLG" />
+    <Objetos  name = "SP_TUTORIAL_2.MOB" />
+		<Minimap 	name = "SP_TUTORIAL_2.TGA" />
+		<Size     x = "125" y = "100" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+  
+  <Mapa name = "Tutorial III">
+    <Texturas name = "SP_TUTORIAL_3.PTE" />
+    <Visual   name = "SP_TUTORIAL_3.PVE" />
+    <Logica   name = "SP_TUTORIAL_3.MLG" />
+    <Objetos  name = "SP_TUTORIAL_3.MOB" />
+		<Minimap 	name = "SP_TUTORIAL_3.TGA" />
+		<Size     x = "125" y = "100" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+  
+  <Mapa name = "Tutorial IV">
+    <Texturas name = "SP_TUTORIAL_4.PTE" />
+    <Visual   name = "SP_TUTORIAL_4.PVE" />
+    <Logica   name = "SP_TUTORIAL_4.MLG" />
+    <Objetos  name = "SP_TUTORIAL_4.MOB" />
+		<Minimap 	name = "SP_TUTORIAL_4.TGA" />
+		<Size     x = "200" y = "125" />
+    <Camara>
+      <Posicion x = "0.0" y = "10.0" z = "0.0" />
+      <Mira     x = "8.0" y = "0.0"  z = "8.0" />
+    </Camara>	</Mapa>
+  
+</Mapas>

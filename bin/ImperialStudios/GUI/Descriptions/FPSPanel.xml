@@ -1,0 +1,13 @@
+<Panel name = "Statistics" layout = "XAXIS" drawBounds = "true" drawBackground = "true" visible = "false"> 
+  
+  <BGColor x =  "50" y =  "50" z = "50" />
+  <BordersColor x = "216" y = "169" z =  "0" />
+  
+  <Position y = "10"/>
+  <Interval y = "2" />
+  
+  <Label name = "FpsCounter">
+    <Text string = "FPS: 0" />
+  </Label>
+  
+</Panel>

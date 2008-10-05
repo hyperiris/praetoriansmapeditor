@@ -1,0 +1,37 @@
+<NatureLabScene>
+	
+  <Controller>
+    
+    <Command type = "change" source = "CancelButton" target = "EditorScene"/>
+    <Command type = "change" source = "AcceptButton" target = "EditorScene"/>
+    
+  </Controller>
+  
+  <Panel visible = "false" name = "Nature Lab">
+    
+    <Font path = "ArialSmall.tga" />
+    <Texture description = "GUIElements.xml" />
+    
+    <Panel description = "OKCancelPanel.xml" />
+    <Panel description = "GeosetPanel.xml" />
+    <Panel description = "ModelPropsPanel.xml" />
+    
+    <Panel name = "ModelPropertiesPanel" layout = "YAXIS" anchorPoint = "CORNERRU" clipSize = "0">
+      <Position x = "-10" y = "10" />
+      <Panel description = "PropsWindowPanel.xml" />
+      <Panel name = "WindFactorPanel" layout = "YAXIS" drawBounds = "false" drawBackground = "false">
+        <Slider callbackString = "WindFactorSlider" discWidth = "16" discHeight = "25" progress = "0.79">
+          <Text string = "Wind factor: 0.79" />
+        </Slider>
+      </Panel>
+    </Panel>
+    
+    <TexCoordsDesc xStart = "201" yStart = "2"   xEnd = "217" yEnd = "27"  type = "SLIDER"/>
+    <TexCoordsDesc xStart = "1"   yStart = "136" xEnd = "21"  yEnd = "155" type = "CHECK_BOX"/>
+    <TexCoordsDesc xStart = "25"  yStart = "132" xEnd = "49"  yEnd = "155" type = "CHECK_BOX_MARK"/>
+    <TexCoordsDesc xStart = "8"   yStart = "7" xEnd = "61"  yEnd = "59" type = "RADIO_BUTTON"/>
+    <TexCoordsDesc xStart =  "72" yStart = "11" xEnd = "117" yEnd = "56" type = "CHECK_RB_MARK"/>
+    
+  </Panel>
+  
+</NatureLabScene>

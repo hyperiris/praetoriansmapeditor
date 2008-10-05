@@ -1,0 +1,48 @@
+<Panel 	name           	= "Debug"
+        layout         	= "YAXIS"
+        drawBounds     	= "false"
+        drawBackground 	= "false"
+        clipSize				= "0">
+  
+  <Interval x="0" y="0" />
+  
+  <Panel name = "DebugProperties" layout = "YAXIS">
+    
+    <CheckBox callbackString = "TextureCheckbox" checked = "true">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "Textured view" />
+    </CheckBox>
+    
+    <CheckBox callbackString = "DebugCheckbox">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "Spatial view" />
+    </CheckBox>
+    
+    <CheckBox callbackString = "GridCheckbox">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "Grid" />
+    </CheckBox>
+    
+    <CheckBox callbackString = "WireCheckbox">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "Wire view" />
+    </CheckBox>
+    
+    <CheckBox callbackString = "GuidesCheckbox">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "Guides" />
+    </CheckBox>
+    
+    <CheckBox callbackString = "LogicCheckbox">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "Logic view" />
+    </CheckBox>
+    
+    <CheckBox callbackString = "FlagsCheckbox">
+      <Color x = "1"  y = "1" z = "1" />
+      <Text string = "Flag view" />
+    </CheckBox>
+  
+  </Panel>
+
+</Panel>

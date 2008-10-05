@@ -1,0 +1,203 @@
+<Panel name = "OptionsConfigPanel"
+       layout = "YAXIS"
+       drawBounds = "false"
+       drawBackground = "false"
+       clipSize = "0">
+  
+  <BGColor x = "20"  y = "20"  z = "20" w = "1" />
+  <BordersColor x = "0.3" y = "0.3" z = "0.3" />
+  
+  <TabbedPanel callbackString = "OptionsTabs" drawBounds = "true" drawBackGround = "false" clipSize = "0">
+    
+    <TabButtonsBordersColor x = "102" y = "90" z = "34" />
+    <TabButtonsColor x = "68" y = "56" z = "10" />
+    <BordersColor x = "102" y = "90" z = "34" />
+    <BGColor x = "20" y = "20" z = "20" w = "1" />
+    
+    <Panel name = "Camera" layout = "CEN_YAXIS" drawBounds = "false" drawBackground = "false">
+      
+      <Slider callbackString = "CameraSpeed" discWidth = "16" discHeight = "25" progress = "0.04">
+        <Text string = "Speed: 0.04 * 100 units/s" />
+        <Dimensions x = "175" />
+      </Slider>
+      
+      <Slider callbackString = "CameraRadius" discWidth = "16" discHeight = "25" progress = "0.50">
+        <Text string = "View distance: 0.50 * 100 units" />
+        <Dimensions x = "175" />
+      </Slider>
+      
+      <CheckBox callbackString = "InfiniteViewCheckbox">
+        <Color x = "1"  y = "1" z = "1" />
+        <Text string = "Infinity" />
+      </CheckBox>
+      
+    </Panel>
+    
+    <Panel name = "Spatial index" layout = "XAXIS" drawBounds = "false" drawBackground = "false">
+      
+      <Interval x = "20" y = "10"/>
+      
+      <Panel name = "CellSize" layout = "CEN_YAXIS">
+      
+        <Label name = "CellSizeLabel">
+          <Text string = "Cell size">
+            <Color r = "255" g = "180" b = "40" />
+          </Text>
+        </Label>
+        
+        <ComboBox callbackString = "CellSizes" clipSize = "0">
+          <ScrollingColor x = "88" y = "76" z = "30" />
+          <BordersColor x = "102" y = "90" z = "34" />
+          <BGColor x = "20" y = "20" z = "20" w = "0.6" />
+          <Button name = "cbbutton" drawBounds = "true" clipSize = "0" >
+            <BordersColor x = "88" y = "76" z = "30" />
+            <Color x = "68" y = "56" z = "10" w = "1" />
+          </Button>
+          <Item string = "8" />
+          <Item string = "4" />
+          <Item string = "16" />
+        </ComboBox>
+        
+      </Panel>
+      
+      <Panel name = "Branch size" layout = "CEN_YAXIS">
+      
+        <Label name = "BranchSizeLabel">
+          <Text string = "Branch size">
+            <Color r = "255" g = "180" b = "40" />
+          </Text>
+        </Label>
+        
+        <ComboBox callbackString = "BranchSizes" clipSize = "0">
+          <ScrollingColor x = "88" y = "76" z = "30" />
+          <BordersColor x = "102" y = "90" z = "34" />
+          <BGColor x = "20" y = "20" z = "20" w = "0.6" />
+          <Button name = "cbbutton" drawBounds = "true" clipSize = "0" >
+            <BordersColor x = "88" y = "76" z = "30" />
+            <Color x = "68" y = "56" z = "10" w = "1" />
+          </Button>
+          <Item string = "4" />
+          <Item string = "2" />
+        </ComboBox>
+        
+      </Panel>
+      
+    </Panel>
+    
+    <Panel name = "Terrain Logic" layout = "XAXIS">
+    
+      <Panel name = "LogicColorPanel" layout = "CEN_YAXIS" >
+      
+        <Label name = "LCLabel">
+          <Text string = "Logic color">
+            <Color r = "255" g = "180" b = "40" />
+          </Text>
+        </Label>
+      
+        <Panel name = "LCPPanel" layout = "XAXIS" >
+      
+          <Slider callbackString = "LogicRedSlider" orientation = "VERTICAL" discWidth = "16" discHeight = "25" progress = "0.00">
+            <Text string = "Red: 0.00"/>
+          </Slider>
+          
+          <Slider callbackString = "LogicGreenSlider" orientation = "VERTICAL" discWidth = "16" discHeight = "25" progress = "0.00">
+            <Text string = "Green: 0.00"/>
+          </Slider>
+          
+          <Slider callbackString = "LogicBlueSlider" orientation = "VERTICAL" discWidth = "16" discHeight = "25" progress = "1.00">
+            <Text string = "Blue: 1.00"/>
+          </Slider>
+          
+          <Button callbackString = "LogicColorPreview" bounce = "false" clipSize = "0" minAlpha = "1" drawBounds = "true">
+            <BordersColor x = "58" y = "46" z = "0" />
+            <Color r = "0" g = "0" b = "1" a = "1" />
+            <Dimensions x = "50" y = "50" />
+          </Button>
+          
+          <Panel name = "LCPPanel" layout = "YAXIS">
+            
+            <Label name = "LRLabel">
+              <Text string = "R: 0.00">
+                <Color r = "255" g = "0" b = "0" />
+              </Text>
+            </Label>
+            
+            <Label name = "LGLabel">
+              <Text string = "G: 0.00">
+                <Color r = "0" g = "255" b = "0" />
+              </Text>
+            </Label>
+            
+            <Label name = "LBLabel">
+              <Text string = "B: 0.00">
+                <Color r = "0" g = "0" b = "255" />
+              </Text>
+            </Label>
+            
+          </Panel>
+        
+        </Panel>
+      
+      </Panel>
+      
+      <Panel name = "FlagColorPanel" layout = "CEN_YAXIS" >
+        
+        <Label name = "FLCLabel">
+          <Text string = "Flag color">
+            <Color r = "255" g = "180" b = "40" />
+          </Text>
+        </Label>
+      
+        <Panel name = "FLCPanel" layout = "XAXIS" >
+        
+          <Slider callbackString = "FlagRedSlider" orientation = "VERTICAL" discWidth = "16" discHeight = "25" progress = "1.00">
+            <Text string = "Red: 1.00"/>
+          </Slider>
+          
+          <Slider callbackString = "FlagGreenSlider" orientation = "VERTICAL" discWidth = "16" discHeight = "25" progress = "0.00">
+            <Text string = "Green: 0.00"/>
+          </Slider>
+          
+          <Slider callbackString = "FlagBlueSlider" orientation = "VERTICAL" discWidth = "16" discHeight = "25" progress = "0.00">
+            <Text string = "Blue: 0.00"/>
+          </Slider>
+          
+          <Button callbackString = "FlagColorPreview" bounce = "false" clipSize = "0" minAlpha = "1" drawBounds = "true">
+            <BordersColor x = "58" y = "46" z = "0" />
+            <Color r = "1" g = "0" b = "0" a = "1" />
+            <Dimensions x = "50" y = "50" />
+          </Button>
+          
+          <Panel name = "FLCPPPanel" layout = "YAXIS">
+            
+            <Label name = "FLRLabel">
+              <Text string = "R: 0.00">
+                <Color r = "255" g = "0" b = "0" />
+              </Text>
+            </Label>
+            
+            <Label name = "FLGLabel">
+              <Text string = "G: 0.00">
+                <Color r = "0" g = "255" b = "0" />
+              </Text>
+            </Label>
+            
+            <Label name = "FLBLabel">
+              <Text string = "B: 0.00">
+                <Color r = "0" g = "0" b = "255" />
+              </Text>
+            </Label>
+            
+          </Panel>
+          
+        </Panel>
+      
+      </Panel>
+      
+    </Panel>
+    
+    <Panel description = "FogTab.xml" />
+  
+  </TabbedPanel>
+  
+</Panel>

@@ -1,0 +1,48 @@
+<Panel 	name           	= "Grass"
+        layout         	= "YAXIS"
+        drawBounds     	= "false"
+        drawBackground 	= "false"
+        clipSize				= "0">
+  
+  <Interval x = "0" y = "0" />
+  
+  <Panel name = "GrassButtonsPanel" layout = "XAXIS" drawBounds = "false" drawBackground = "false" clipSize = "0">
+    
+    <Button callbackString = "GrassCreateButton" clipSize = "0" minAlpha = "1">
+      <TextureRectangle x = "1" y = "68" z = "123" w = "98" />
+      <Texture type = "TEXTURE_2D" path = "GUIElements.png"/>
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "60" y = "25" />
+      <Text string = "Create" />
+    </Button>
+    
+    <Button callbackString  = "GrassDestroyButton" drawBounds = "false" clipSize = "0" visible = "false">
+      <Color x = "1" y = "1" z = "1" />
+      <Dimensions x = "20" y = "20" />
+    </Button>
+    
+  </Panel>
+  
+  <Panel name = "PastureLayerList" layout = "XAXIS" drawBounds = "false" drawBackground = "false" clipSize = "0">
+    
+    <Panel name = "PastureLayerClear" layout = "YAXIS">
+      
+      <Interval x = "0" y = "0"/>
+      
+    </Panel>
+      
+    <Panel name = "PastureLayerVisibility" layout = "YAXIS">
+      
+      <Interval x = "0" y = "7"/>
+      
+    </Panel>
+    
+    <Panel name = "PastureLayerSelection" layout = "YAXIS">
+      
+      <Interval x = "3" y = "7"/>
+      
+    </Panel>
+    
+  </Panel>
+
+</Panel>
