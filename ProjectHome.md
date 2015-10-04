@@ -1,0 +1,1 @@
+A map editor for the PC game [Praetorians](http://www.pyrostudios.com/ficha_praetorians.asp). Written in the C++ programming language and uses the [OpenGL](http://www.sgi.com/products/software/opengl/) computer graphics API.
